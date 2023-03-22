@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HITSMauiApp.Views.Leaves.AddPage">
+    <StackLayout>
+
+        <!--Leave Request -->
+        <StackLayout BackgroundColor="#f7edfc" Padding="0">
+            <Frame BackgroundColor="#8F64A5" Padding="10" CornerRadius="0" HeightRequest="40">
+                <Label Text="Leave Information" HorizontalTextAlignment="Start"  TextColor="White" FontSize="15"  FontAttributes="Bold"/>
+            </Frame>
+            <StackLayout Orientation="Horizontal"  >
+
+                <!--Description of person-->
+                <Grid Padding="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*" />
+                        <ColumnDefinition Width="3*" />
+
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                    </Grid.RowDefinitions>
+                    <!--Image-->
+                    <Frame  Grid.Row="0" Grid.RowSpan="4"  Grid.Column="0"  Padding="10" CornerRadius="60" HorizontalOptions="Start" HeightRequest="40" WidthRequest="40" IsClippedToBounds="True">
+                        <Image Source="icon_about_ios.png"  Aspect="Fill" />
+                    </Frame>
+                    <Label  Grid.Row="0" Grid.Column="1"  Text="Moussa Sadik Fangry " TextColor="Black"  FontSize="12" FontAttributes="Bold" Padding="60,0,10,0" />
+                    <Label  Grid.Row="1" Grid.Column="1"  Text="788" TextColor="Black"  FontSize="12" FontAttributes="Bold" Padding="60,0,10,0" />
+                    <Label  Grid.Row="2" Grid.Column="1"  Text="Developer" TextColor="Black"  FontSize="12" FontAttributes="Bold" Padding="60,0,10,0" />
+                    <Label  Grid.Row="3" Grid.Column="1"  Text="software Dwveloper " TextColor="Black"  FontSize="12" FontAttributes="Bold" Padding="60,0,10,0" />
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+        <!--Leave Information -->
+        <StackLayout Padding="0">
+            <Frame BackgroundColor="#8F64A5" Padding="10" CornerRadius="0" HeightRequest="40">
+                <Label Text="Leave Information" HorizontalTextAlignment="Start"  TextColor="White" FontSize="15"  FontAttributes="Bold"/>
+            </Frame>
+            <!--Leave -->
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Leave" FontSize="15" FontAttributes="Bold" Padding="10,5,40,0" TextColor="Black"/>
+                <!--Select the Leaves-->
+                <Picker x:Name="Leaves" Title="Select...." WidthRequest="250">
+                    <Picker.Items>
+                        <x:String>Annual</x:String>
+                        <x:String>Absent with Permission(1/2)</x:String>
+                        <x:String>Absent with Permission(1/4)</x:String>
+                        <x:String>Annual Leave</x:String>
+                        <x:String>Annual Leave(1/2)</x:String>
+                        <x:String>Annual Leave(1/4)</x:String>
+                        <x:String>Day Off Replacement</x:String>
+                        <x:String>Day Off Replacement (1/2)</x:String>
+                        <x:String>Day Off Working</x:String>
+                        <x:String>Emergency Vacation</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <!--From -->
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="From" FontSize="15" FontAttributes="Bold" Padding="10,5,45,0" TextColor="Black"/>
+                <DatePicker WidthRequest="130"></DatePicker>
+            </StackLayout>
+            <!--To -->
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="To" FontSize="15" FontAttributes="Bold" Padding="10,5,60,0" TextColor="Black"/>
+                <DatePicker WidthRequest="130"></DatePicker>
+            </StackLayout>
+        </StackLayout>
+
+        <!--other Information -->
+        <StackLayout>
+            <Frame BackgroundColor="#8F64A5" Padding="10" CornerRadius="0" HeightRequest="40">
+                <Label Text="Other Information" HorizontalTextAlignment="Start"  TextColor="White" FontSize="15"  FontAttributes="Bold"/>
+            </Frame>
+            <Label Text="During my abcence my tel and my address" HorizontalTextAlignment="Center"  TextColor="Black" FontSize="15"  FontAttributes="Bold"/>
+            <!--Telephone -->
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Telephone" FontSize="15" FontAttributes="Bold" Padding="10,5,20,0" TextColor="Black"/>
+                <Entry Placeholder="Tel" WidthRequest="230" Keyboard="Telephone" />
+
+            </StackLayout>
+            <!--Address -->
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Address" FontSize="15" FontAttributes="Bold" Padding="10,5,20,0" TextColor="Black"/>
+                <Entry Placeholder="Address" WidthRequest="230"   Keyboard="Text" />
+
+            </StackLayout>
+            <!--Other Info -->
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Other info" FontSize="15" FontAttributes="Bold" Padding="10,5,20,0" TextColor="Black"/>
+                <Entry Placeholder="" WidthRequest="230"  Keyboard="Text" />
+
+            </StackLayout>
+            <!--L.W Date -->
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="L.W Date" FontSize="15" FontAttributes="Bold" Padding="10,5,20,0" TextColor="Black"/>
+                <DatePicker WidthRequest="130"></DatePicker>
+
+            </StackLayout>
+            <!--F.W Date -->
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="F.W Date" FontSize="15" FontAttributes="Bold" Padding="10,5,20,0" TextColor="Black"/>
+                <DatePicker WidthRequest="130"></DatePicker>
+            </StackLayout>
+            <!--L.W Text -->
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="L.W.Text" FontSize="15" FontAttributes="Bold" Padding="10,5,20,0" TextColor="Black"/>
+                <Entry Placeholder="" WidthRequest="230"  Keyboard="Text" />
+
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
