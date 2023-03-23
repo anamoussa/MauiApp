@@ -56,7 +56,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -72,11 +74,6 @@
 	  <MauiXaml Update="Views\Leaves\LeavesMainPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Models\" />
-	  <Folder Include="ModelViews\" />
 	</ItemGroup>
 
 </Project>

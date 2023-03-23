@@ -6,7 +6,7 @@
     xmlns:local="clr-namespace:HITSMauiApp;clr-namespace:HITSMauiApp.Views.Leaves"
     Shell.FlyoutBehavior="Disabled">
 
-    <TabBar>
+    <!--<TabBar>
         <ShellContent
             Title="New"
             ContentTemplate="{DataTemplate local:AddPage}"
@@ -19,6 +19,10 @@
             Title="Filter"
             ContentTemplate="{DataTemplate local:LeavesMainPage}"
             Icon="{OnPlatform 'icon_about.png', iOS='icon_about_ios.png', MacCatalyst='icon_about_ios.png'}" />
-    </TabBar>
+    </TabBar>-->
 
+    <ShellContent
+            Title="Filter"
+            ContentTemplate="{DataTemplate local:LeavesMainPage}"
+            Icon="{OnPlatform 'icon_about.png', iOS='icon_about_ios.png', MacCatalyst='icon_about_ios.png'}" />
 </Shell>

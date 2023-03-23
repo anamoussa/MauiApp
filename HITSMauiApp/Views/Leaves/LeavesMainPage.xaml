@@ -1,15 +1,121 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HITSMauiApp.Views.Leaves.LeavesMainPage"
-             Title="LeavesMainPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             x:Class="HITSMauiApp.Views.Leaves.LeavesMainPage">
+
+    <Grid
+        ColumnDefinitions="*,*"
+        ColumnSpacing="5"
+        RowDefinitions="*,Auto"
+        RowSpacing="0">
+        
+        <CollectionView ItemsSource="{Binding Vacations}" 
+             Grid.ColumnSpan="3"  >
+            <CollectionView.ItemTemplate >
+                <DataTemplate>
+                    <Frame BorderColor="Purple" Margin="2">
+                        <Grid Padding="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40" />
+                                <RowDefinition Height="20" />
+                                <RowDefinition Height="20" />
+                                <RowDefinition Height="20" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+
+                            <Label Grid.Column="0" FontSize="10"   Grid.Row="0"  HorizontalTextAlignment="Start"
+                           Text="{Binding tybe}"  />
+
+                            <Label Grid.Column="0" FontSize="10"   Grid.Row="1" 
+                           Text="from"
+                           HeightRequest="60"
+                           WidthRequest="60"   />
+
+                            <Label Grid.Column="0" FontSize="10"   Grid.Row="2" 
+                           Text="to"
+                           HeightRequest="60"
+                           WidthRequest="60" />
+
+                            <Label Grid.Column="0" FontSize="10"   Grid.Row="3" 
+                           Text=" category"
+                           HeightRequest="60"
+                           WidthRequest="60" />
+
+
+                            <Label Grid.Column="1" FontSize="10"   Grid.Row="1" 
+                           Text="{Binding from}"
+                           HeightRequest="60"
+                           WidthRequest="60" />
+
+                            <Label Grid.Column="1" FontSize="10"   Grid.Row="2" 
+                           Text="{Binding to}"
+                           HeightRequest="60"
+                           WidthRequest="60" />
+
+                            <Label Grid.Column="1" FontSize="10"   Grid.Row="3" 
+                           Text="{Binding category}"
+                           HeightRequest="60"
+                           WidthRequest="60" />
+
+                            <Label Grid.Column="2"    Grid.Row="0" FontSize="10"    HorizontalTextAlignment="End"
+                           Text="{Binding noOfDays}" />
+                            <Label Grid.Column="2"    Grid.Row="1" FontSize="10"    HorizontalTextAlignment="End"
+                           Text="Days" />
+                        </Grid>
+
+                    </Frame>
+                    
+                    
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Frame Grid.Row="1"  Grid.ColumnSpan="3" BorderColor="Black" Margin="5">
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+      
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                
+                <Button
+           FontSize="10"  
+            Grid.Row="0"
+            Grid.Column="0"
+            Text="NEW" 
+                    Clicked="Button_Clicked_1"
+            WidthRequest="60"
+            />
+                <Button
+           FontSize="10"  
+            Grid.Row="0"
+            Grid.Column="1"
+            Text="Balance" 
+            WidthRequest="60"
+                    Clicked="Button_Clicked_2"
+            />
+                <Button
+           FontSize="10" 
+            Grid.Row="0"
+            Grid.Column="2"
+             WidthRequest="60"
+            Text="Filter" 
+                    Clicked="Button_Clicked_3"
+                    />
+            </Grid>
+        </Frame>
+        
+     
+
+
+    </Grid>
 </ContentPage>
-    
-    
-    
