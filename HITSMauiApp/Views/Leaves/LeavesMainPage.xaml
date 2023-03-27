@@ -69,8 +69,6 @@
                         </Grid>
 
                     </Frame>
-                    
-                    
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
